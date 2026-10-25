@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jarvis — Accedi al tuo assistente</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #1a1d24;
+    --border: #2a2e38;
+    --text: #e8e6e1;
+    --muted: #9aa0ab;
+    --accent: #4f8cff;
+    --accent2: #7c5cff;
+    --green: #34d399;
+    --red: #f87171;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: radial-gradient(1200px 600px at 50% -10%, #1a2030 0%, var(--bg) 60%);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 40px 36px;
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  }
+  .logo {
+    width: 72px; height: 72px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 34px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  h1 { font-size: 26px; margin-bottom: 8px; }
+  .sub { color: var(--muted); font-size: 15px; margin-bottom: 28px; line-height: 1.5; }
+  .status {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(52,211,153,.1);
+    border: 1px solid rgba(52,211,153,.3);
+    color: var(--green);
+    padding: 8px 16px; border-radius: 999px;
+    font-size: 14px; font-weight: 600;
+    margin-bottom: 28px;
+  }
+  .status .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: pulse 1.6s infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+  .btn {
+    display: block; width: 100%;
+    padding: 16px 20px;
+    border: none; border-radius: 14px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #fff; font-size: 17px; font-weight: 700;
+    cursor: pointer; text-decoration: none;
+    transition: transform .15s, box-shadow .15s;
+    box-shadow: 0 8px 24px rgba(79,140,255,.3);
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(79,140,255,.4); }
+  .btn:active { transform: translateY(0); }
+  .hint { color: var(--muted); font-size: 13px; margin-top: 20px; line-height: 1.6; }
+  .hint code {
+    background: #232733; padding: 2px 6px; border-radius: 6px;
+    font-size: 12px; color: var(--text);
+  }
+  .warn {
+    margin-top: 24px; padding: 14px 16px;
+    background: rgba(248,113,113,.08);
+    border: 1px solid rgba(248,113,113,.25);
+    border-radius: 12px;
+    color: var(--red); font-size: 13px; line-height: 1.5;
+    text-align: left;
+  }
+  .warn b { display: block; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">J</div>
+    <h1>Jarvis</h1>
+    <p class="sub">Il tuo assistente personale per macOS.<br>Accedi da qualsiasi rete, ovunque tu sia.</p>
+
+    <div class="status"><span class="dot"></span> Online — pronto all'uso</div>
+
+    <a class="btn" href="https://governmental-robinson-bug-wall.trycloudflare.com" target="_blank" rel="noopener">
+      Apri Jarvis →
+    </a>
+
+    <p class="hint">
+      Il link apre l'interfaccia completa di Jarvis: chat, voce, autonomia,
+      servizi esterni e generazione immagini.<br>
+      <b>Nota:</b> l'URL del tunnel cambia a ogni riavvio del Mac.
+      Aggiorna questa pagina dal repo se il link non funziona.
+    </p>
+
+    <div class="warn">
+      <b>⚠️ Sicurezza</b>
+      Questo URL è pubblico: chiunque abbia il link può raggiungere Jarvis.
+      Non condividere il link e chiudi il tunnel quando non lo usi.
+      Le azioni che modificano il sistema richiedono comunque conferma.
+    </div>
+  </div>
+</body>
+</html>
