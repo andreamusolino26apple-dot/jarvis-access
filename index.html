@@ -15,6 +15,7 @@
     --accent2: #7c5cff;
     --green: #34d399;
     --red: #f87171;
+    --yellow: #fbbf24;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -32,7 +33,7 @@
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 40px 36px;
-    max-width: 520px;
+    max-width: 540px;
     width: 100%;
     text-align: center;
     box-shadow: 0 20px 60px rgba(0,0,0,.5);
@@ -49,7 +50,7 @@
     letter-spacing: 1px;
   }
   h1 { font-size: 26px; margin-bottom: 8px; }
-  .sub { color: var(--muted); font-size: 15px; margin-bottom: 28px; line-height: 1.5; }
+  .sub { color: var(--muted); font-size: 15px; margin-bottom: 24px; line-height: 1.5; }
   .status {
     display: inline-flex; align-items: center; gap: 8px;
     background: rgba(52,211,153,.1);
@@ -57,7 +58,7 @@
     color: var(--green);
     padding: 8px 16px; border-radius: 999px;
     font-size: 14px; font-weight: 600;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
   }
   .status .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: pulse 1.6s infinite; }
   @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
@@ -78,8 +79,19 @@
     background: #232733; padding: 2px 6px; border-radius: 6px;
     font-size: 12px; color: var(--text);
   }
+  .steps {
+    margin-top: 20px; padding: 18px 20px;
+    background: #1e222b; border: 1px solid var(--border);
+    border-radius: 14px; text-align: left;
+    font-size: 14px; line-height: 1.7;
+  }
+  .steps b { color: var(--accent); }
+  .steps code {
+    background: #232733; padding: 2px 6px; border-radius: 6px;
+    font-size: 12px; color: var(--text);
+  }
   .warn {
-    margin-top: 24px; padding: 14px 16px;
+    margin-top: 20px; padding: 14px 16px;
     background: rgba(248,113,113,.08);
     border: 1px solid rgba(248,113,113,.25);
     border-radius: 12px;
@@ -100,6 +112,14 @@
     <a class="btn" href="https://governmental-robinson-bug-wall.trycloudflare.com" target="_blank" rel="noopener">
       Apri Jarvis →
     </a>
+
+    <div class="steps">
+      <b>Se Jarvis non risponde dalla chat:</b><br>
+      Il server deve girare dal tuo terminale (non da un ambiente sandboxato).
+      Sul Mac, apri Terminale nella cartella di Jarvis e lancia:<br>
+      <code>./Avvia\ Jarvis\ Remoto.command</code><br>
+      Questo avvia server + tunnel insieme e la chat funziona.
+    </div>
 
     <p class="hint">
       Il link apre l'interfaccia completa di Jarvis: chat, voce, autonomia,
